@@ -24,7 +24,7 @@ const AdContainer = ({slotID}: any) => {
 };
 
 const Container = styled.div`
-    width: 100px;
+    width: 500px;
     height: 100%;
     background-color: white;
     color: black;
