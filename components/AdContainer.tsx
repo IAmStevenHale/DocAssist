@@ -5,7 +5,8 @@ declare const window: any;
 
 const AdContainer = ({slotID}: any) => {
     useEffect(() => {
-        let adsbygoogle = window.adsbygoogle || [].push({});
+        let adsbygoogle = window.adsbygoogle || [];
+        adsbygoogle.push({});
 
     }, [])
 
