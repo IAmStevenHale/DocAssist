@@ -1,30 +1,40 @@
-import Document from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { Html, Head, Main, NextScript } from 'next/document';
 
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+export default function Document() {
+    
+  return (
+    <Html>
+      <Head />
+      <body>
+        <script
+          async
+          src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1034524975771842'
+          crossorigin='anonymous'
+        ></script>
 
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        });
+        <ins
+          class='adsbygoogle'
+          style='display:block'
+          data-ad-client='ca-pub-1034524975771842'
+          data-ad-slot='3468851388'
+          data-ad-format='auto'
+          data-full-width-responsive='true'
+        ></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <Main />
+        <NextScript />
 
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
-      };
-    } finally {
-      sheet.seal();
-    }
-  }
+        {/* Global Site Tag (gtag.js) - Google Analytics */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `,
+          }}
+        />
+      </body>
+    </Html>
+  );
 }

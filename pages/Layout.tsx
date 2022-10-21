@@ -4,7 +4,7 @@ import { showManualSearchAtom, themeAtom } from '../jotai/jotai';
 import { useAtom } from 'jotai';
 import styled from 'styled-components';
 import ManualSearch from '../components/ManualSearch';
-import AdContainer from '../components/AdContainer';
+// import AdContainer from '../components/AdContainer';
 import Footer from '../components/Footer';
 
 function Layout({ children }: any) {
@@ -13,13 +13,13 @@ function Layout({ children }: any) {
 
     return (
         <Container theme={theme}>
-            <AdContainer />
+            {/* <AdContainer /> */}
                 <InnerContainer theme={theme}>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
                 </InnerContainer>
-            <AdContainer />
+            {/* <AdContainer /> */}
         </Container>
     );
 }
