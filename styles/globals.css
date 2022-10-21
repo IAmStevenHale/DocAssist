@@ -13,6 +13,21 @@ a {
 
 * {
   box-sizing: border-box;
+  transition: 500ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+#__next {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +35,24 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--dark-secondary);
+    background: var(--dark-primary);
   }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: var(--light-secondary);
+    background: var(--light-primary);
+  }
+}
+
+:root {
+  --dark-primary: #111111;
+  --dark-secondary: #f5deb3;
+  --light-primary: #ffffff;
+  --light-secondary: #000000;
 }
