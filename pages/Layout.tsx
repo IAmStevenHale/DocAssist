@@ -13,13 +13,11 @@ function Layout({ children }: any) {
 
     return (
         <Container theme={theme}>
-            {/* <AdContainer /> */}
                 <InnerContainer theme={theme}>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
                 </InnerContainer>
-            {/* <AdContainer /> */}
         </Container>
     );
 }

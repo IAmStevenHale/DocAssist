@@ -9,12 +9,12 @@ export default function Document() {
         <script
           async
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1034524975771842'
-          crossorigin='anonymous'
+          crossOrigin='anonymous'
         ></script>
 
         <ins
-          class='adsbygoogle'
-          style='display:block'
+          className='adsbygoogle'
+          style={{display:'block'}}
           data-ad-client='ca-pub-1034524975771842'
           data-ad-slot='3468851388'
           data-ad-format='auto'
