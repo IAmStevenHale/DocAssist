@@ -10,10 +10,8 @@ const Home: NextPage = () => {
     const [theme] = useAtom(themeAtom);
     return (
         <Container theme={theme}>
-            <AdContainer />
             <SmartSearch/>
             <ManualSearch/>
-            <AdContainer />
         </Container>
     );
 };
@@ -28,6 +26,5 @@ const Container = styled.div<{theme: string}>`
     align-items: center;
     padding: 0 10px 10px 10px;
 `;
-
 
 export default Home;

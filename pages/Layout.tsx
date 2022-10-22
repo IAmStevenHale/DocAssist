@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import ManualSearch from '../components/ManualSearch';
 // import AdContainer from '../components/AdContainer';
 import Footer from '../components/Footer';
+import AdContainer from '../components/AdContainer';
 
 function Layout({ children }: any) {
     const [theme] = useAtom(themeAtom);
@@ -17,11 +18,13 @@ function Layout({ children }: any) {
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1034524975771842"
                     crossOrigin="anonymous"></script>
             </head>
+            <AdContainer />
                 <InnerContainer theme={theme}>
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
                 </InnerContainer>
+            <AdContainer />
         </Container>
     );
 }
