@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import ThemeButton  from './ThemeButton';
-import ManualSearchButton from './SearchButton';
 import { useAtom } from 'jotai';
 import { themeAtom } from '../../jotai/jotai';
 
@@ -10,7 +9,7 @@ const Navbar = () => {
         <Container theme={theme}>
             <ThemeButton />
             <h1>Doc Assist</h1>
-            <ManualSearchButton />
+            <div style={{minWidth: '150px'}}/>
         </Container>
     );
 };
@@ -22,13 +21,12 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: transparent;
     & > h1 {
      ${({ theme }) =>
         theme === 'dark'
-        ? `background-color: var(--dark-primary);
-            color: var(--dark-secondary);`
-            : ` background-color: var(--light-primary);
-            color: var(--light-secondary);`};
+        ? `color: var(--dark-secondary);`
+            : `color: var(--light-secondary);`};
     }
 `;
 
